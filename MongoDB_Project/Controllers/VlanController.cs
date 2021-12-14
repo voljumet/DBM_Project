@@ -14,7 +14,8 @@ namespace MongoDB_Project.Controllers
     [Route("[controller]")]
     public class VlanController : Controller
     {
-
+        
+        // HER -----------------------------
         private IMongoCollection<Vlan_dim> _vlan;
 
         public VlanController(IMongoClient client)
