@@ -1,0 +1,33 @@
+use radius;
+insert into radacct values (
+1,
+  "acctsessionid",
+  "acctuniqueid",
+  "80:80:80:80",
+  "groupname",
+  "realm",
+  "nasipaddress",
+  "nasportid",
+  "nasporttype",
+  '2015-04-03 14:00:45',
+  '2015-04-03 14:00:45',
+  '2015-04-03 14:00:45',
+  2,
+  3,
+  "acctauthentic",
+  "connectinfo_start",
+  "connectinfo_stop",
+  4,
+  5,
+  "calledstationid",
+  "callingstationid",
+  "acctterminatecause",
+  "servicetype",
+  "framedprotocol",
+  "framedipaddress",
+  "framedipv6address",
+  "framedipv6prefix",
+  "framedinterfaceid",
+  "delegatedipv6prefix"
+
+);
