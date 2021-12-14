@@ -14,7 +14,7 @@ namespace MongoDB_Project.Controllers
     [Route("[controller]")]
     public class VlanController : Controller
     {
-     
+
         private IMongoCollection<Vlan_dim> _vlan;
 
         public VlanController(IMongoClient client)
@@ -26,8 +26,16 @@ namespace MongoDB_Project.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-           
-            var vlan = _vlan.Find(s => s.AccessibleByUser == "Admin").ToList();
+            BsonDocument filter = new BsonDocument();
+            filter.Add("$or", new BsonArray()
+                  .Add(new BsonDocument()
+                          .Add("AccessibleByUser", "Admin")
+                  )
+                  .Add(new BsonDocument()
+                          .Add("AccessibleByUser", "Student")
+                  )
+          );
+            var vlan = _vlan.Find(filter).ToList();
 
 
             return View(vlan);

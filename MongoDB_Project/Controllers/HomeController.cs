@@ -23,6 +23,21 @@ namespace MongoDB_Project.Controllers
             return View();
         }
 
+         public IActionResult mySQL()
+        {
+            return View();
+        }
+
+         public IActionResult mongoDB()
+        {
+            return View();
+        }
+
+         public IActionResult neu4j()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
